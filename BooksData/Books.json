@@ -1,0 +1,46 @@
+[
+    {
+        "branch":"CSE",
+        "semester":"5",
+        "subject":"FLAT",
+
+        "id":150001,
+        "author":"Hopcroft and Ullman",
+        "name":"Introduction To Automata Theory",
+        "keywords":"Introduction To Automata Theory 150001 Computer Science CS FLAT",
+        "description":"This is a book of Pearson Education of 3rd edition published in 2014",
+        "star":5,
+        "color":"",
+        "image":"",
+        "link":"",
+        "size":"",
+        "pages":"",
+
+        "preview":"",
+        "visits":"",
+        "like":"",
+        "download":""
+    },
+    {
+        "branch":"CSE",
+        "semester":"5",
+        "subject":"FLAT",
+
+        "id":150002,
+        "author":"Martin J.C",
+        "name":"Introduction To Language And Theory of Computation",
+        "keywords":"Introduction To Language And Theory of Computation 150002 Computer Science CS FLAT",
+        "description":"This is a book of TMH POublication of 4rd edition published in 2010",
+        "star":5,
+        "color":"",
+        "image":"",
+        "link":"",
+        "size":"",
+        "pages":"",
+
+        "preview":"",
+        "visits":"",
+        "like":"",
+        "download":""
+    }
+]
