@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+// Login - https://codepen.io/CodeOpacity/pen/YzjaMde
+// Card - https://codepen.io/lauraalpinto/pen/qLzGBX
+
 import Home from "./Components/Home"
 import Books from "./Components/Books"
 import Notes from "./Components/Notes"
 import Questions from "./Components/Questions"
 import Err from "./Err"
 import Nav from "./Components/Nav"
+import Loader from "./Components/Loader"
 import { AppContext } from "./contextLib";
 
 function App() {
@@ -31,9 +35,10 @@ function App() {
         {isLoading ? (
           <>
             <br /><br />
-            <div className="Loader">
+            {/* <div className="Loader">
               <img src="https://i.pinimg.com/originals/5b/f0/a3/5bf0a3e0601d35349c5451fa52138ea6.gif" alt="" />
-            </div>
+            </div> */}
+            <Loader />
           </>
         ) : (
           <BrowserRouter>

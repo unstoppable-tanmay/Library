@@ -5,6 +5,7 @@ import "./Css/Books.scss"
 import "./Css/BookAnimation.scss"
 // Nav
 import Nav from "./Nav"
+import Loader from "./Loader"
 // Modules
 import Chip from '@mui/material/Chip';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
@@ -142,9 +143,7 @@ const Books = (props) => {
     isLoading ? (
       <>
         <Nav />
-        <div className="Loader">
-          <img src="https://i.pinimg.com/originals/5b/f0/a3/5bf0a3e0601d35349c5451fa52138ea6.gif" alt="" />
-        </div>
+        <Loader/>
       </>
     ) : (
       <>

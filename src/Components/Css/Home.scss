@@ -121,7 +121,7 @@
     flex-direction: column;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 10px 30px #00000020;
+    box-shadow: 0 10px 30px #00000030;
     overflow: hidden;
     margin-top: 0px;
     margin-bottom: 80px;
@@ -180,7 +180,7 @@
 .Footer{
     width: 95%;
     max-width: 1400px;
-    height: 200px;
+    min-height: 200px;
     border-radius: 20px 20px 0px 0px;
     background: #16191e;
     display: flex;
@@ -247,5 +247,10 @@
     .Footer{
         flex-direction: column;
         flex-wrap: nowrap;
+        gap: 40px;
+        padding: 20px;
+    }
+    .Suggestion{
+        padding: 20px 30px 20px 30px;
     }
 }

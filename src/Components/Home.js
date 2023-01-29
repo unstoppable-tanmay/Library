@@ -135,7 +135,7 @@ const Home = () => {
             <div className="Footer">
                 <div className="Name">
                     <div className="heading">The Books</div>
-                    <div className="des">Get Set and Read </div>
+                    <div className="des">"Get Set and Read"</div>
                 </div>
                 <div className="Logo"><img src={logo} alt="" /></div>
                 <div className="social_handel">
