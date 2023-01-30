@@ -88,15 +88,19 @@ const Books = (props) => {
   // ? Open Book PopUp 
   const OpenBook = () => {
     return (
-      <ScrollToBottom>
-      {/* <Slide direction="up" in={openBook}> */}
+      <ScrollToBottom >
+        {/* <Slide direction="up" in={openBook}> */}
         <Modal
+          onLoad={() => {
+            var element = document.querySelector(".OpenBook");
+            element.scrollTop = element.scrollHeight;
+          }}
           open={openBook}
           onClose={() => { setOpenBook(false); setOpenedBook(null) }}
           className="BookModalHolder"
         >
           {openedBook !== null ? (
-            <div className="OpenBook">
+            <div className="OpenBook" >
               <span className="ClosedBookOpen" onClick={() => { setOpenBook(false); setOpenedBook(null) }}><CloseIcon /></span>
               <div className="OpenBookData">
                 <div className="Book">
@@ -124,7 +128,7 @@ const Books = (props) => {
                   </div>
                   <div className="ButtonGroup">
                     <div className="SaveBtn"><BookmarkRoundedIcon /></div>
-                    <Button variant="contained" startIcon={<FileDownloadRoundedIcon  />}>
+                    <Button variant="contained" startIcon={<FileDownloadRoundedIcon />}>
                       Download
                     </Button>
                   </div>
@@ -143,7 +147,7 @@ const Books = (props) => {
     isLoading ? (
       <>
         <Nav />
-        <Loader/>
+        <Loader />
       </>
     ) : (
       <>
