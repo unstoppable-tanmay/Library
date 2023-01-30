@@ -10,20 +10,20 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 const Card = (props) => {
     return (
         <>
-            <div class="card-wrapper">
-                <div class="card-container">
-                    <div class="card-header">
+            <div className="card-wrapper">
+                <div className="card-container">
+                    <div className="card-header">
                         <img src={props.img}alt="" />
                     </div>
-                    <div class="card-footer-title">
+                    <div className="card-footer-title">
                         {props.name}
                     </div>
                 </div>
-                <div class="card-hover-content-container">
-                    <div class="card-menu-icon">
+                <div className="card-hover-content-container">
+                    <div className="card-menu-icon">
                     <MenuRoundedIcon/>
                     </div>
-                    <div class="card-hover-content">
+                    <div className="card-hover-content">
                         <a href={props.insta}>
                             <InstagramIcon/>
                         </a>

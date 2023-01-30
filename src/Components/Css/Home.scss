@@ -187,13 +187,13 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    color: #fff;
 
     .Name{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        color: #fff;
         .heading{
             font-size: 28px;
             font-weight: 700;
@@ -209,6 +209,10 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
+    }
+    .text{
+        max-width: 345px;
+        text-align: center;
     }
 }
 @media (max-width:900px) {

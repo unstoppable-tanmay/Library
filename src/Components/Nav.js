@@ -9,10 +9,10 @@ import logo from "./res/Logo.svg"
 // Modules
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
-import MenuIcon from '@mui/icons-material/Menu';
-import Divider from '@mui/material/Divider';
-import Chip from '@mui/material/Chip';
-import ClearIcon from '@mui/icons-material/Clear';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
+import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 
 const Nav = () => {
     const [navigation, setNavigaion] = useState("Err")
@@ -28,9 +28,9 @@ const Nav = () => {
         <div className="Nav">
             <img className="Logo" src={logo} alt="Book" />
             <div className="SearchBar">
-                <ion-icon name="search-outline"></ion-icon>
+            <SearchRoundedIcon/>
                 <input className="" type="text" name="SearchBook" id="BookSearch" placeholder='Enter Book' value={searchData} onChange={e => setSearchData(e.target.value)} />
-                <button className="SearchEnter" onClick={()=>setSearch(!search)}><ion-icon name="arrow-forward-outline"></ion-icon></button>
+                <button className="SearchEnter" onClick={()=>setSearch(!search)}><ArrowForwardRoundedIcon/></button>
             </div>
             <div className="Menu">
                 <Link to="/"><span className={navigation === "/" ? "MenuItems Dark" : "MenuItems"}>Home</span></Link>
@@ -39,7 +39,7 @@ const Nav = () => {
                 <Link to="/questions"><span className={navigation === "/questions" ? "MenuItems Dark" : "MenuItems"}>Questions</span></Link>
                 <Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>
             </div>
-            <Button onClick={() => setdrawer(true)} className="Menu_btn"><MenuIcon sx={{ color: "#000", fontSize: 33 }} /></Button>
+            <Button onClick={() => setdrawer(true)} className="Menu_btn"><MenuRoundedIcon sx={{ color: "#000", fontSize: 33 }} /></Button>
             <Drawer
                 anchor="right"
                 open={drawer}
@@ -49,7 +49,7 @@ const Nav = () => {
                 <div className="Menu_Side">
                     <div className="Menu_Side_covered">
                         <img className="Logo" src={logo} alt="Book" />
-                        <Button onClick={() => setdrawer(false)} className="Menu_btn"><ClearIcon sx={{ color: "#000", fontSize: 33 }} /></Button>
+                        <Button onClick={() => setdrawer(false)} className="Menu_btn"><ClearRoundedIcon sx={{ color: "#000", fontSize: 33 }} /></Button>
                     </div>
                     <Link to="/"><span className={navigation === "/" ? "MenuItems Dark" : "MenuItems"}>Home</span></Link>
                     <Link to="/books"><span className={navigation === "/books" ? "MenuItems Dark" : "MenuItems"}>Books</span></Link>

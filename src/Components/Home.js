@@ -16,6 +16,7 @@ import AnimatedText from 'react-animated-text-content';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 const Home = () => {
     const [back, setBack] = useState(false)
@@ -134,14 +135,17 @@ const Home = () => {
             {/* Footer */}
             <div className="Footer">
                 <div className="Name">
+                    <div className="Logo"><img src={logo} alt="" /></div>
                     <div className="heading">The Books</div>
                     <div className="des">"Get Set and Read"</div>
                 </div>
-                <div className="Logo"><img src={logo} alt="" /></div>
+                {/* <div className="Logo"><img src={logo} alt="" /></div> */}
+                <div className="text">We are trying our best to make the website user friendly, If you have any problem and query then contact us by the social handle given. <br /><span>-Tanmay & Team</span></div>
                 <div className="social_handel">
-                    <InstagramIcon sx={{ color: "#fff",fontSize: "30px" }}/>
-                    <GitHubIcon sx={{ color: "#fff",fontSize: "30px" }}/>
-                    <LinkedInIcon sx={{ color: "#fff",fontSize: "30px" }}/>
+                    <InstagramIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                    <GitHubIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                    <LinkedInIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                    <AlternateEmailIcon sx={{ color: "#fff", fontSize: "30px" }} />
                 </div>
             </div>
         </>

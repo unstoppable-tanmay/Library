@@ -26,6 +26,7 @@ function App() {
       .then((actualData) => { setData(actualData); setIsLoading(false) })
       .catch((err) => {
         console.log(err.message);
+        alert(err.message)
       });
   }, [])
 
@@ -35,9 +36,6 @@ function App() {
         {isLoading ? (
           <>
             <br /><br />
-            {/* <div className="Loader">
-              <img src="https://i.pinimg.com/originals/5b/f0/a3/5bf0a3e0601d35349c5451fa52138ea6.gif" alt="" />
-            </div> */}
             <Loader />
           </>
         ) : (
