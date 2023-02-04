@@ -17,6 +17,7 @@ const Card = (props) => {
                     </div>
                     <div className="card-footer-title">
                         {props.name}
+                        <div className="card-footer-title-des">{props.des}</div>
                     </div>
                 </div>
                 <div className="card-hover-content-container">

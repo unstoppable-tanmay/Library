@@ -55,7 +55,7 @@
         transition: .4s;
     }
     @keyframes fadein {
-        0%{transform: translateY(150%)}
+        0%{transform: translateY(100vh)}
         100%{transform: translateY(0%)}
     }
 }
@@ -111,7 +111,7 @@
     }
 }
 .Suggestion{
-    width: 500px;
+    width: 700px;
     max-width: 90vw;
     min-height: 400px;
     padding: 0px 30px 0px 30px;
@@ -188,6 +188,8 @@
     justify-content: space-around;
     flex-wrap: wrap;
     color: #fff;
+    gap: 30px;
+    padding: 20px;
 
     .Name{
         display: flex;
@@ -204,11 +206,22 @@
             word-spacing: 6px;
         }
     }
-    .social_handel{
+    .SocialGrp{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        gap: 5px;
+        flex-direction: column;
+        a{
+            color: #fff;
+            font-size: 13px;
+        }
+        .social_handel{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
     }
     .text{
         max-width: 345px;

@@ -4,10 +4,12 @@ import Nav from "./Components/Nav"
 
 const Err = () => {
   return (
-    <div className="Err w-full flex items-center flex-col">
-      <Nav value={0} />
-      Err
-    </div>
+    <>
+      <Nav />
+      <div className="Err">
+        Err
+      </div>
+    </>
   )
 }
 

@@ -5,7 +5,6 @@ import "./Css/Book.css"
 // My Component
 import Nav from "./Nav"
 import Counter from './Counter'
-import Rating from './Rating'
 import Card from "./Card"
 // Img
 import book_cover from "./res/book_cover.png"
@@ -26,7 +25,6 @@ const Home = () => {
     return (
         <>
             <Nav />
-            <Rating />
             {/* Home */}
             <div className="Home">
                 {/* view-back     open-book      view-rotate*/}
@@ -60,7 +58,7 @@ const Home = () => {
                 </div>
 
                 {/* Book */}
-                <Tooltip title={back ? "Click To Close" : "Click To Open"} arrow>
+                <Tooltip className='BookToolTip' title={back ? "Click To Close" : "Click To Open"} arrow>
                     <div id="book" onMouseEnter={() => setHeading(false)} onMouseLeave={() => { setHeading(true); }} className={back ? "open-book" : "view-cover"} onClick={() => setBack(!back)}>
                         <div className="main">
                             <div className="book-font">
@@ -71,6 +69,18 @@ const Home = () => {
                             </div>
                             <div className="book-page">
                                 {/* page Details */}
+                                <AnimatedText
+                                    type='words'
+                                    interval={0.05}
+                                    className="Des"
+                                    duration={1}
+                                    animation={{
+                                        y: '100px',
+                                        ease: 'ease',
+                                    }}
+                                >
+                                    "When I look back, I am so impressed again with the life-giving power of literature. If I were a young person today, trying to gain a sense of myself in the world, I would do that again by reading, just as I did when I was young." – Maya Angelou
+                                </AnimatedText> 
                             </div>
                             <div className="book-back">
                                 {/* <img src="https://i.pinimg.com/originals/29/c4/89/29c489252af8d27cb817b97538dcf9a5.png" alt="" /> */}
@@ -112,9 +122,9 @@ const Home = () => {
             </div>
             {/* Profile Coders */}
             <div className="ProfileCard">
-                <Card img="https://1.bp.blogspot.com/-J_SmSLk4AKk/X5bbIBOJNGI/AAAAAAAAEAk/FrlG14Sbd-gnFcfV6yTpaYLxsaRGchNrACPcBGAsYHg/s724/IMG_20201026_194220.jpg" name="Love Babber" />
-                <Card img="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" name="Tanmay Kumar" />
-                <Card img="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" name="Swadhin Muduli" />
+                <Card img="https://1.bp.blogspot.com/-J_SmSLk4AKk/X5bbIBOJNGI/AAAAAAAAEAk/FrlG14Sbd-gnFcfV6yTpaYLxsaRGchNrACPcBGAsYHg/s724/IMG_20201026_194220.jpg" name="Love Babber" des="Founder" />
+                <Card img="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" name="Tanmay Kumar" des="Developer" />
+                <Card img="https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" name="Swadhin Muduli" des="UI Designer" />
             </div>
             {/* Suggestion */}
             <div className="Suggestion">
@@ -141,11 +151,14 @@ const Home = () => {
                 </div>
                 {/* <div className="Logo"><img src={logo} alt="" /></div> */}
                 <div className="text">We are trying our best to make the website user friendly, If you have any problem and query then contact us by the social handle given. <br /><span>-Tanmay & Team</span></div>
-                <div className="social_handel">
-                    <InstagramIcon sx={{ color: "#fff", fontSize: "30px" }} />
-                    <GitHubIcon sx={{ color: "#fff", fontSize: "30px" }} />
-                    <LinkedInIcon sx={{ color: "#fff", fontSize: "30px" }} />
-                    <AlternateEmailIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                <div className="SocialGrp">
+                    <div className="social_handel">
+                        <InstagramIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                        <GitHubIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                        <LinkedInIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                        <AlternateEmailIcon sx={{ color: "#fff", fontSize: "30px" }} />
+                    </div>
+                    <a href="#">tanmaypanda752@gmail.com</a>
                 </div>
             </div>
         </>

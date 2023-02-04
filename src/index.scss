@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 
 #root{
     width: 100%;
@@ -9,44 +9,51 @@
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
+    background: #ffffff;
 }
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    outline: none;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+*::-webkit-scrollbar-track
+{
+  margin-right: 5px;
+  background-color: transparent;
+}
 
-  *::-webkit-scrollbar-track
-  {
-    margin-right: 5px;
-    background-color: transparent;
-  }
-  
-  *::-webkit-scrollbar
-  {
-    width: 10px;
-    background-color: #F5F5F5;
-  }
-  
-  *::-webkit-scrollbar-thumb
-  {
-    background-color: #000000;
-    border-radius: 20px;
-  }
+*::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+}
 
-  .Loader{
-    width: 100%;
-    height: calc(100vh - 100px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+*::-webkit-scrollbar-thumb
+{
+  background-color: #000000;
+  border-radius: 20px;
+}
 
-    img{
-        width: 250px;
-        height: 200px;
-    }
+.Section{
+  width: 100vw;
+  max-width: 1400px;
+}
+
+.Loader{
+  width: 100%;
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img{
+      width: 250px;
+      height: 200px;
+  }
 }

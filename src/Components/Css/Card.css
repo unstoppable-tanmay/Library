@@ -52,6 +52,12 @@
     left: 17px;
     transition: .7s;
   }
+
+  .card-footer-title-des{
+    font-size: 14px;
+    color: #FFFFFF80;
+    font-weight: 500;
+  }
   
   .card-hover-content-container {
     background-color: #1d1e24;

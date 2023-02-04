@@ -8,7 +8,6 @@ const Counter = ({ target, title, duration }) => {
 		threshold: 0.3,
 		triggerOnce: true,
 	});
-
 	return (
 		<div className='Count ' ref={ref}>
 			<CountUp

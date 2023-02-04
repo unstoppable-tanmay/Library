@@ -30,7 +30,7 @@ const Nav = () => {
             <div className="SearchBar">
             <SearchRoundedIcon/>
                 <input className="" type="text" name="SearchBook" id="BookSearch" placeholder='Enter Book' value={searchData} onChange={e => setSearchData(e.target.value)} />
-                <button className="SearchEnter" onClick={()=>setSearch(!search)}><ArrowForwardRoundedIcon/></button>
+                <div className="SearchEnter" onClick={()=>setSearch(!search)}><ArrowForwardRoundedIcon/></div>
             </div>
             <div className="Menu">
                 <Link to="/"><span className={navigation === "/" ? "MenuItems Dark" : "MenuItems"}>Home</span></Link>
