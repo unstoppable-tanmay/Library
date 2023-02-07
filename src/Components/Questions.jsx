@@ -9,12 +9,14 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import question from "./res/question.jpg"
+
 const Questions = () => {
   return (
     <>
       <Nav />
       <div className="Questions">
-        <img className="Background" src='https://i.gifer.com/embedded/download/4DAq.gif' alt="df" />
+        <img className="Background" src={question} alt="df" />
         <div className="QuestionContent">
           <div className="Heading">#Questions</div>
           <div className="SelectData">
