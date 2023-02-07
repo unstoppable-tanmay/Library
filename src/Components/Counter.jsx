@@ -9,7 +9,7 @@ const Counter = ({ target, title, duration }) => {
 		triggerOnce: true,
 	});
 	return (
-		<div className='Count ' ref={ref}>
+		<div className='Count drop' ref={ref}>
 			<CountUp
 				start={0}
 				end={inView ? target : 0}

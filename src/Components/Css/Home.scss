@@ -230,6 +230,7 @@
 }
 @media (max-width:900px) {
     .Home{
+        max-height: 85vh;
         .HomeContent{
             backdrop-filter: blur(4px);
         }

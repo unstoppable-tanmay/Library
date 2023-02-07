@@ -57,38 +57,42 @@ const Books = (props) => {
   }
 
   // ? Trendings Book
-  const TrendingBooks = React.memo((props) => {
+  const TrendingBooks = (props) => {
     console.log("render trendings books")
     return (
-      <div className="TrendingBooks" style={{ background: "#" + props.val.color }} onClick={() => { setOpenBook(true); setOpenedBook(props.val) }}>
-        <img src={props.val.image} alt="hello" className="book" />
-        <div className="Content">
-          <div className="Heading">{props.val.name}</div>
-          <div className="Author">{props.val.author}</div>
-          <div className="Stars">
-            <Star star={props.val.star + 1} color="#ffffff" fontSize="large" />
+      <ButtonBase className="TrendingBookContainer">
+        <div className="TrendingBooks" style={{ background: "#" + props.val.color }} onClick={() => { setOpenBook(true); setOpenedBook(props.val) }}>
+          <img src={props.val.image} alt="hello" className="book" />
+          <div className="Content">
+            <div className="Heading">{props.val.name}</div>
+            <div className="Author">{props.val.author}</div>
+            <div className="Stars">
+              <Star star={props.val.star + 1} color="#ffffff" fontSize="large" />
+            </div>
+            <div className="Des">{props.val.description}</div>
           </div>
-          <div className="Des">{props.val.description}</div>
         </div>
-      </div>
+      </ButtonBase>
     )
-  },[])
+  }
   // ? Browse Books
   const BrowseBooks = (props) => {
     console.log("render browse books")
     return (
       <InView triggerOnce="true">
         {({ inView, ref, entry }) => (
-          <div ref={ref} className={inView ? "BrowseBooks fadein" : "BrowseBooks"} onClick={() => { setOpenBook(true); setOpenedBook(props.val) }}>
-            <img src={props.val.image} alt="hello" className="book" />
-            <div className="Content">
-              <div className="Heading">{props.val.name}</div>
-              <div className="Author">{props.val.author}</div>
-              <div className="Stars">
-                <Star star={props.val.star + 1} color={"#" + props.val.color} size="small" />
+          <ButtonBase>
+            <div ref={ref} className={inView ? "BrowseBooks fadein" : "BrowseBooks"} onClick={() => { setOpenBook(true); setOpenedBook(props.val) }}>
+              <img src={props.val.image} alt="hello" className="book" />
+              <div className="Content">
+                <div className="Heading">{props.val.name}</div>
+                <div className="Author">{props.val.author}</div>
+                <div className="Stars">
+                  <Star star={props.val.star + 1} color={"#" + props.val.color} size="small" />
+                </div>
               </div>
             </div>
-          </div>
+          </ButtonBase>
         )}
       </InView>
     )
@@ -166,9 +170,7 @@ const Books = (props) => {
               <div className="Trendings">
                 {TrendingsBookData.map((val, ind) => {
                   return (
-                    <span className={`slide-${ind}`} key={ind}>
-                      <ButtonBase><TrendingBooks val={val} /></ButtonBase>
-                    </span>
+                    <TrendingBooks val={val} key={ind} />
                   )
                 })}
               </div>
@@ -180,7 +182,7 @@ const Books = (props) => {
               <div className="Heading">For You</div>
               {BookData.map((val, ind) => {
                 return (
-                  <ButtonBase key={ind}><BrowseBooks val={val} key={ind} /></ButtonBase>
+                  <BrowseBooks val={val} key={ind} />
                 )
               })}
             </div>

@@ -119,9 +119,9 @@
                 100%{transform: translateX(00px);opacity:1}
             }
             .BrowseBooks{
-                max-width: 95vw;
+                max-width: 87vw;
                 width: 380px;
-                height: 240px;
+                min-height: 240px;
                 display: flex;
                 align-items: center;
                 padding: 30px;
@@ -130,13 +130,20 @@
                 text-align: start;
                 border-radius: 10px;
                 background: #fff;
-                box-shadow: 0px 5px 30px #00000015;
                 transition: .4s;
+                box-shadow: 0px 5px 40px #00000025;
 
                 &:hover{
                     margin-top: -20px;
                     margin-bottom: 20px;
-                    box-shadow: 0px 5px 40px #00000025;
+                    box-shadow:
+                    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                    0 100px 80px rgba(0, 0, 0, 0.12)
+                  ;
                 }
                 &:hover img{
                     transform: rotate(-5deg);
@@ -339,8 +346,21 @@
         }
     }
 }
+
 @media (max-width: 700px) {
-    
+    .Trendings{
+        .TrendingBookContainer{
+            transform: scale(.97) !important;
+        }
+    }
+    .AllBooks{
+        .BooksContainer{
+            .BrowseBooks{
+                max-width: 85vw;
+                box-shadow: 0px 5px 30px #00000025;
+            }
+        }
+    }
     .OpenBook{
         .OpenBookData{
             flex-direction: column;

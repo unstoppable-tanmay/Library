@@ -1,0 +1,147 @@
+.User{
+    min-height: calc(100vh - 100px);
+    width: 95vw;
+    max-width: 1300px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+
+    .UserContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .UserInfo{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .UserCard{
+                max-width: 90vw;
+                width: 700px;
+                height: 190px;
+                border-radius: 10px;
+                background: #fff;
+                overflow: hidden;
+                display: flex;
+                img{
+                    width: 30%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .Content{
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    color: #000;
+                    text-align: center;
+
+                    .name{
+                        width: auto;
+                        font-size: 30px;
+                        font-weight: 600;
+                    }
+                    .des{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: transparentize($color: #000000, $amount: .6);
+                    }
+                }
+            }
+            .UserSpec{
+                max-width: 90vw;
+                width: 700px;
+                height: 300px;
+                border-radius: 10px;
+                background: #fff;
+            }
+        }
+        .UserStatus{
+            width: 200px;
+            height: 510px;
+            border-radius: 10px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0px 10px 0px;
+            gap: 10px;
+
+            hr{
+                width: 90%;
+                height: 3px;
+                color: transparentize($color: #000000, $amount: .5);
+            }
+
+            .statusHolder{
+                width: 90%;
+                height: 180px;
+                border-radius: 8px;
+                overflow: hidden;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .downloads,.saved{
+                width: 90%;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                font-size: 20px;
+                font-weight: 600;
+                transition: .4s;
+                border-radius: 10px;
+                span{
+                    color: transparentize($color: #000000, $amount: .6);
+                }
+            }
+            .quote{
+                width: 85%;
+                text-align: center;
+                height: 100px;
+            }
+        }
+    }
+    .TimeLine{
+        max-width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .User{
+        .UserContainer{
+            .UserInfo{
+                .UserCard{
+                    img{
+                        width: 40%;
+                    }
+                }
+            }
+            .UserStatus{
+                max-width: 90vw;
+                width: 700px;
+                min-height: 300px;
+
+                .statusHolder{
+                    width: 95%;
+                    height: 240px;
+                }
+            }
+        }
+    }    
+}

@@ -8,8 +8,9 @@ import Home from "./Components/Home"
 import Books from "./Components/Books"
 import Notes from "./Components/Notes"
 import Questions from "./Components/Questions"
+import User from "./Components/User"
 import Err from "./Err"
-import Nav from "./Components/Nav"
+
 import Rating from './Components/Rating'
 import Loader from "./Components/Loader"
 import { AppContext } from "./contextLib";
@@ -26,15 +27,20 @@ function App() {
   }
 
   useEffect(() => {
-    setIsLoading(true)
-    fetch(`https://mocki.io/v1/efd26afd-4f7c-4d1b-a3df-644494c48995`)
-      .then((response) => response.json())
-      .then((actualData) => { setData(actualData);console.log("data loaded") })
-      .catch((err) => {
-        console.log(err.message);
-        alert(err.message)
-        setError(true);
-      });
+    const wait = async () => {
+      setIsLoading(true)
+      fetch(`https://mocki.io/v1/efd26afd-4f7c-4d1b-a3df-644494c48995`)
+        .then((response) => response.json())
+        .then((actualData) => { setData(actualData);console.log("data loaded") })
+        .catch((err) => {
+          console.log(err.message);
+          alert(err.message)
+          setError(true);
+        });
+      await sleep(1500);
+      setIsLoading(false)
+    }
+    wait()
   }, [])
 
   useEffect(() => {
@@ -43,15 +49,6 @@ function App() {
       setRatingopen(true);
     }
     wait(60000)
-  },[])
-
-  useEffect(() => {
-    const wait = async () => {
-      setIsLoading(true)
-      await sleep(1500);
-      setIsLoading(false)
-    }
-    wait()
   },[])
 
   return (
@@ -69,6 +66,7 @@ function App() {
               <Route path="/books" element={<Books />} />
               <Route path="/notes" element={<Notes />} />
               <Route path="/questions" element={<Questions />} />
+              <Route path="/user" element={<User />} />
               <Route path="*" element={<Err />} />
             </Routes>
           </BrowserRouter>
