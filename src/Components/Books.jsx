@@ -16,7 +16,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import Divider from '@mui/material/Divider';
 import FileDownloadRoundedIcon from '@mui/icons-material/FileDownloadRounded';
 import BookmarkRoundedIcon from '@mui/icons-material/BookmarkRounded';
-import ScrollToBottom from 'react-scroll-to-bottom';
 import { InView } from 'react-intersection-observer';
 
 
@@ -62,7 +61,7 @@ const Books = (props) => {
     return (
       <ButtonBase className="TrendingBookContainer">
         <div className="TrendingBooks" style={{ background: "#" + props.val.color }} onClick={() => { setOpenBook(true); setOpenedBook(props.val) }}>
-          <img src={props.val.image} alt="hello" className="book" />
+          <img src={props.val.image} alt="hello" className="book" loading="lazy"/>
           <div className="Content">
             <div className="Heading">{props.val.name}</div>
             <div className="Author">{props.val.author}</div>
@@ -83,7 +82,7 @@ const Books = (props) => {
         {({ inView, ref, entry }) => (
           <ButtonBase>
             <div ref={ref} className={inView ? "BrowseBooks fadein" : "BrowseBooks"} onClick={() => { setOpenBook(true); setOpenedBook(props.val) }}>
-              <img src={props.val.image} alt="hello" className="book" />
+              <img src={props.val.image} alt="hello" className="book" loading="lazy" />
               <div className="Content">
                 <div className="Heading">{props.val.name}</div>
                 <div className="Author">{props.val.author}</div>

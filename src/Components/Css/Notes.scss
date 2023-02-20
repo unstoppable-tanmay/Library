@@ -28,6 +28,8 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 30px;
+            margin-bottom: 50px;
+            min-height: calc(100vh - 100px);
 
             .NoteFrame{
                 width: 250px;

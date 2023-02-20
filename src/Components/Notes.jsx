@@ -72,6 +72,11 @@ const Notes = () => {
           <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="Theory of Computation and Os" author="tanmay" />
           <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
           <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
+          <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
+          <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
+          <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
+          <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
+          <NoteFrame img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScfrKkpq5d0rVh2ASSS-qbQjicJJgKgWYnOQ&usqp=CAU" title="TOC" author="tanmay" />
         </div>
       </div>
     </>
