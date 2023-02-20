@@ -22,27 +22,38 @@ const User = () => {
                                 <div className="des">CSE 5th sem</div>
                             </div>
                         </div>
-                        <div className="UserSpec"></div>
+                        <div className="UserSpec">
+                            <div className="heading">About You</div>
+                            <div className="UserData">
+                                <div className="email">Email : tanmaypanda752@gmail.com</div>
+                                <div className="userid">User Id : 2001110091</div>
+                            </div>
+                        </div>
                     </div>
                     <div className="UserStatus">
                         <div className="statusHolder">
                             <img src="https://cdn.dribbble.com/users/515705/screenshots/9818728/media/4a706681babc1cf92c04487bcdfbfdde.jpg?compress=1&resize=400x300" alt="" />
                         </div>
-                        <div className="downloads">
-                            <DownloadRoundedIcon sx={{ fontSize: "30px", color: "#8f86ff" }} />
-                            <span>57 Downloads</span>
-                        </div>
-                        <div className="saved">
-                            <BookmarkRoundedIcon sx={{ fontSize: "30px", color: "#8f86ff" }} />
-                            <span>48 Saved</span>
+                        <div className="Data">
+                            <div className="downloads">
+                                <DownloadRoundedIcon sx={{ fontSize: "30px", color: "#8f86ff" }} />
+                                <span>57 Downloads</span>
+                            </div>
+                            <div className="saved">
+                                <BookmarkRoundedIcon sx={{ fontSize: "30px", color: "#8f86ff" }} />
+                                <span>48 Saved</span>
+                            </div>
                         </div>
                         <div className="quote">"The way to get started is to quit talking and begin doing."</div>
                     </div>
                 </div>
-                <div className="mailus"></div>
-                <div className="TimeLine">
-                    <TimeLine />
+                <div className="mailus">
+                    
                 </div>
+                {/* <div className="TimeLine">
+                    Downloads
+                    <TimeLine />
+                </div> */}
             </div>
         </>
     )

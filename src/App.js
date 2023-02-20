@@ -16,7 +16,9 @@ import Loader from "./Components/Loader"
 import { AppContext } from "./contextLib";
 
 function App() {
-  const [data, setData] = useState([]);
+  const [BookData, setBookData] = useState([]);
+  const [NoteData, setNoteData] = useState([]);
+  const [UserData,setUserData] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const [search, setSearch] = useState(false);
   const [ratingopen, setRatingopen] = useState(false)
@@ -31,7 +33,7 @@ function App() {
       setIsLoading(true)
       fetch(`https://mocki.io/v1/efd26afd-4f7c-4d1b-a3df-644494c48995`)
         .then((response) => response.json())
-        .then((actualData) => { setData(actualData);console.log("data loaded") })
+        .then((actualData) => { setBookData(actualData);console.log("data loaded") })
         .catch((err) => {
           console.log(err.message);
           alert(err.message)
@@ -53,7 +55,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{ data, isLoading, setIsLoading, search, setSearch, ratingopen, setRatingopen, error, setError }}>
+      <AppContext.Provider value={{ BookData, NoteData, isLoading, setIsLoading, search, setSearch, ratingopen, setRatingopen, error, setError }}>
         {isLoading ? (
           <>
             <br /><br />

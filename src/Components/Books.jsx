@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCall, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useAppContext } from "../contextLib";
 // Css
 import "./Css/Books.scss"
@@ -22,13 +22,13 @@ import { InView } from 'react-intersection-observer';
 
 
 const Books = (props) => {
-  const { data, isLoading, setIsLoading, search, setSearch } = useAppContext()
-  const TrendingsBookData = data;
+  const { BookData, isLoading, setIsLoading, search, setSearch } = useAppContext()
+  const TrendingsBookData = BookData;
   const [openBook, setOpenBook] = useState(false);
   const [openedBook, setOpenedBook] = useState(null);
   const [filter, setFilter] = useState({ civil: false, mechanical: false, electrical: false, cse: false, one: false, two: false, three: false, four: false, five: false, six: false, seven: false });
 
-  const BookData = data.filter((item) =>
+  const LocalBookData = BookData.filter((item) =>
   (!(filter.civil || filter.electrical || filter.mechanical || filter.cse || filter.one || filter.two || filter.three || filter.four || filter.five || filter.six || filter.seven) ? true :
     ((filter.civil && item.branch === "CE") ||
       (filter.electrical && item.branch === "EE") ||
@@ -180,7 +180,7 @@ const Books = (props) => {
           <div className="AllBooks">
             <div className="BooksContainer">
               <div className="Heading">For You</div>
-              {BookData.map((val, ind) => {
+              {LocalBookData.map((val, ind) => {
                 return (
                   <BrowseBooks val={val} key={ind} />
                 )
