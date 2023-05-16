@@ -55,6 +55,18 @@ const Home = () => {
                     >
                         "The Books Are The Portal For Knowledge"
                     </AnimatedText>
+                    <AnimatedText
+                        type='words'
+                        interval={0.05}
+                        className="Des_min"
+                        duration={1}
+                        animation={{
+                            y: '100px',
+                            ease: 'ease',
+                        }}
+                    >
+                        "Developed and Maintained by Team Unstoppable"
+                    </AnimatedText>
                 </div>
 
                 {/* Book */}

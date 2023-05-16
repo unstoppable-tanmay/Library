@@ -30,14 +30,22 @@
         backdrop-filter: blur(7px);
         
         .heading{
-            font-size: 90px;
+            font-size: 95px;
             line-height: 90px;
             font-weight: 900;
         }
         .Des{
+            margin-left: 15px;
             font-size: 14px;
             letter-spacing: 3.6px;
             word-spacing: 6px;
+        }
+        .Des_min{
+            margin-left: 15px;
+            margin-top: 5px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            word-spacing: 1px;
         }
     }
     .hide{

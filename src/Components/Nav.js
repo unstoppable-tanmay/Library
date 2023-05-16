@@ -18,7 +18,7 @@ const Nav = () => {
     const [navigation, setNavigaion] = useState("Err")
     const [searchData, setSearchData] = useState("");
     const [drawer, setdrawer] = useState(false)
-    const {search, setSearch } = useAppContext()
+    const {search, setSearch, isAuth } = useAppContext()
 
     useEffect(() => {
         setNavigaion(window.location.pathname)
@@ -37,7 +37,8 @@ const Nav = () => {
                 <Link to="/books"><span className={navigation === "/books" ? "MenuItems Dark" : "MenuItems"}>Books</span></Link>
                 <Link to="/notes"><span className={navigation === "/notes" ? "MenuItems Dark" : "MenuItems"}>Notes</span></Link>
                 <Link to="/questions"><span className={navigation === "/questions" ? "MenuItems Dark" : "MenuItems"}>Questions</span></Link>
-                <Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>
+                {isAuth?<Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>:
+                <Link to="/login"><span className={navigation === "/login" ? "MenuItems Dark" : "MenuItems"}>Login</span></Link>}
             </div>
             <Button onClick={() => setdrawer(true)} className="Menu_btn"><MenuRoundedIcon sx={{ color: "#000", fontSize: 33 }} /></Button>
             <Drawer
@@ -55,7 +56,8 @@ const Nav = () => {
                     <Link to="/books"><span className={navigation === "/books" ? "MenuItems Dark" : "MenuItems"}>Books</span></Link>
                     <Link to="/notes"><span className={navigation === "/notes" ? "MenuItems Dark" : "MenuItems"}>Notes</span></Link>
                     <Link to="/questions"><span className={navigation === "/questions" ? "MenuItems Dark" : "MenuItems"}>Questions</span></Link>
-                    <Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>
+                    {isAuth?<Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>:
+                    <Link to="/login"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>Login</span></Link>}
                 </div>
             </Drawer>
         </div>

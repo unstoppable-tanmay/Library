@@ -10,6 +10,7 @@ import Notes from "./Components/Notes"
 import Questions from "./Components/Questions"
 import User from "./Components/User"
 import Err from "./Err"
+import Login from "./Components/Login"
 
 import Rating from './Components/Rating'
 import Loader from "./Components/Loader"
@@ -23,6 +24,7 @@ function App() {
   const [search, setSearch] = useState(false);
   const [ratingopen, setRatingopen] = useState(false)
   const [error, setError] = useState(false)
+  const [isAuth, setAuth] = useState(false)
 
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -55,7 +57,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{ BookData, NoteData, isLoading, setIsLoading, search, setSearch, ratingopen, setRatingopen, error, setError }}>
+      <AppContext.Provider value={{ BookData, NoteData, isLoading, setIsLoading, search, setSearch, ratingopen, setRatingopen, error, setError, isAuth }}>
         {isLoading ? (
           <>
             <br /><br />
@@ -69,6 +71,7 @@ function App() {
               <Route path="/notes" element={<Notes />} />
               <Route path="/questions" element={<Questions />} />
               <Route path="/user" element={<User />} />
+              <Route path="/login" element={<Login />} />
               <Route path="*" element={<Err />} />
             </Routes>
           </BrowserRouter>
