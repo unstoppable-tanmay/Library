@@ -18,7 +18,7 @@ const Nav = () => {
     const [navigation, setNavigaion] = useState("Err")
     const [searchData, setSearchData] = useState("");
     const [drawer, setdrawer] = useState(false)
-    const {search, setSearch, isAuth } = useAppContext()
+    const { search, setSearch, isAuth } = useAppContext()
 
     useEffect(() => {
         setNavigaion(window.location.pathname)
@@ -28,17 +28,17 @@ const Nav = () => {
         <div className="Nav">
             <img className="Logo" src={logo} alt="Book" />
             <div className="SearchBar">
-            <SearchRoundedIcon/>
+                <SearchRoundedIcon />
                 <input className="" type="text" name="SearchBook" id="BookSearch" placeholder='Enter Book' value={searchData} onChange={e => setSearchData(e.target.value)} />
-                <div className="SearchEnter" onClick={()=>setSearch(!search)}><ArrowForwardRoundedIcon/></div>
+                <div className="SearchEnter" onClick={() => setSearch(!search)}><ArrowForwardRoundedIcon /></div>
             </div>
             <div className="Menu">
                 <Link to="/"><span className={navigation === "/" ? "MenuItems Dark" : "MenuItems"}>Home</span></Link>
                 <Link to="/books"><span className={navigation === "/books" ? "MenuItems Dark" : "MenuItems"}>Books</span></Link>
-                <Link to="/notes"><span className={navigation === "/notes" ? "MenuItems Dark" : "MenuItems"}>Notes</span></Link>
-                <Link to="/questions"><span className={navigation === "/questions" ? "MenuItems Dark" : "MenuItems"}>Questions</span></Link>
-                {isAuth?<Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>:
-                <Link to="/login"><span className={navigation === "/login" ? "MenuItems Dark" : "MenuItems"}>Login</span></Link>}
+                {/* <Link to="/notes"><span className={navigation === "/notes" ? "MenuItems Dark" : "MenuItems"}>Notes</span></Link> */}
+                {/* <Link to="/questions"><span className={navigation === "/questions" ? "MenuItems Dark" : "MenuItems"}>Questions</span></Link> */}
+                {/* {isAuth?<Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>:
+                <Link to="/login"><span className={navigation === "/login" ? "MenuItems Dark" : "MenuItems"}>Login</span></Link>} */}
             </div>
             <Button onClick={() => setdrawer(true)} className="Menu_btn"><MenuRoundedIcon sx={{ color: "#000", fontSize: 33 }} /></Button>
             <Drawer
@@ -54,10 +54,10 @@ const Nav = () => {
                     </div>
                     <Link to="/"><span className={navigation === "/" ? "MenuItems Dark" : "MenuItems"}>Home</span></Link>
                     <Link to="/books"><span className={navigation === "/books" ? "MenuItems Dark" : "MenuItems"}>Books</span></Link>
-                    <Link to="/notes"><span className={navigation === "/notes" ? "MenuItems Dark" : "MenuItems"}>Notes</span></Link>
+                    {/* <Link to="/notes"><span className={navigation === "/notes" ? "MenuItems Dark" : "MenuItems"}>Notes</span></Link>
                     <Link to="/questions"><span className={navigation === "/questions" ? "MenuItems Dark" : "MenuItems"}>Questions</span></Link>
                     {isAuth?<Link to="/user"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>User</span></Link>:
-                    <Link to="/login"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>Login</span></Link>}
+                    <Link to="/login"><span className={navigation === "/user" ? "MenuItems Dark" : "MenuItems"}>Login</span></Link>} */}
                 </div>
             </Drawer>
         </div>

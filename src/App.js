@@ -57,7 +57,7 @@ function App() {
 
   return (
     <>
-      <AppContext.Provider value={{ BookData, NoteData, isLoading, setIsLoading, search, setSearch, ratingopen, setRatingopen, error, setError, isAuth }}>
+      <AppContext.Provider value={{ BookData, NoteData, isLoading, setIsLoading, search, setSearch, ratingopen, setRatingopen, error, setError, isAuth, setAuth }}>
         {isLoading ? (
           <>
             <br /><br />
@@ -68,8 +68,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/books" element={<Books />} />
-              <Route path="/notes" element={<Notes />} />
-              <Route path="/questions" element={<Questions />} />
+              {/* <Route path="/notes" element={<Notes />} /> */}
+              {/* <Route path="/questions" element={<Questions />} /> */}
               <Route path="/user" element={<User />} />
               <Route path="/login" element={<Login />} />
               <Route path="*" element={<Err />} />

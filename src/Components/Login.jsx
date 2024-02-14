@@ -8,15 +8,20 @@ import Input from '@mui/material/Input';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import GoogleIcon from '@mui/icons-material/Google';
+import { useAppContext } from "../contextLib";
+import { useNavigate } from "react-router-dom";
 
 import Nav from "./Nav"
 
 import "./Css/Login.scss"
+import { Navigate } from 'react-router-dom';
 
 const Login = () => {
     const [switchTab, setSwitchTab] = useState(false)
     const [showPassword, setShowPassword] = React.useState(true);
     const [progress, setProgress] = React.useState(0);
+    const {setAuth, isAuth } = useAppContext()
+    const navigate = useNavigate();
 
     return (
         <>
@@ -90,7 +95,7 @@ const Login = () => {
                         </div>
                     </div>
                     <br />
-                    <div className="SubmitButton">Let's Go</div>
+                    <div className="SubmitButton" onClick={()=>{setAuth(!isAuth);navigate('/user')}}>Let's Go</div>
                     <br />
                     <div className="GoogleButton"><GoogleIcon/> Sign Up With Google</div>
                     <br /><br />

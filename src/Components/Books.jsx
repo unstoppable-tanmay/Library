@@ -166,7 +166,7 @@ const Books = (props) => {
             <>
               <div className="Heading">Trendings</div>
               <br />
-              <div className="Trendings">
+              <div className="Trendings ">
                 {TrendingsBookData.map((val, ind) => {
                   return (
                     <TrendingBooks val={val} key={ind} />
